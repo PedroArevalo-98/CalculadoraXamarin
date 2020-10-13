@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CalculadoraXamarin.MainPage">
+
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <OnPlatform.iOS>0,20,0,0</OnPlatform.iOS>
+        </OnPlatform> 
+        
+    </ContentPage.Padding>
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="infostyle" TargetType="Button">
+                <Setter Property="WidthRequest" Value="60"/>
+                <Setter Property="HeightRequest" Value="60"/>
+                <Setter Property="BorderRadius" Value="30"/>
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="FontSize" Value="36"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <Grid Padding="5,0" RowSpacing="5" ColumnSpacing="5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+           
+        </Grid.RowDefinitions>
+
+        <Label x:Name="resulText" FontSize="48" FontAttributes="Bold" BackgroundColor="Black" Text="0" TextColor="White"
+               HorizontalTextAlignment="End" VerticalTextAlignment="Center" LineBreakMode="NoWrap" Grid.ColumnSpan="4"/>
+        
+                <Button Text="C" Grid.Row="1" Grid.Column="0" TextColor="White" BackgroundColor="LightGray" WidthRequest="50" HeightRequest="0" FontSize="Title" HorizontalOptions="FillAndExpand" Clicked="Limpiar"></Button>
+                <Button Text="√"  Grid.Row="1" Grid.Column="1" TextColor="White" BackgroundColor="LightGray" WidthRequest="50" HeightRequest="50" FontSize="Title" HorizontalOptions="FillAndExpand" Clicked="RaizSeleccionado"></Button>
+                <Button Text="%"  Grid.Row="1" Grid.Column="2" TextColor="White" BackgroundColor="LightGray" WidthRequest="50" HeightRequest="50" FontSize="Title" HorizontalOptions="FillAndExpand" Clicked="PorcentajeSeleccionado"></Button>
+                <Button Text="/"  Grid.Row="1" Grid.Column="3" TextColor="White" BackgroundColor="#2abb9b" WidthRequest="50" HeightRequest="50" FontSize="Title" HorizontalOptions="FillAndExpand" Clicked="OperadorSeleccionado"></Button>
+
+
+
+
+        <Button Text="7"  Grid.Row="2" Grid.Column="0" TextColor="White" BackgroundColor="LightGray" WidthRequest="50" HeightRequest="50" FontSize="Title" HorizontalOptions="FillAndExpand" Clicked="NumeroSeleccionado"></Button>
+        <Button Text="8"  Grid.Row="2" Grid.Column="1" TextColor="White" BackgroundColor="LightGray" WidthRequest="50" HeightRequest="50" FontSize="Title" HorizontalOptions="FillAndExpand" Clicked="NumeroSeleccionado"></Button>
+        <Button Text="9"  Grid.Row="2" Grid.Column="2" TextColor="White" BackgroundColor="LightGray" WidthRequest="50" HeightRequest="50" FontSize="Title" HorizontalOptions="FillAndExpand" Clicked="NumeroSeleccionado"></Button>
+        <Button Text="x"  Grid.Row="2" Grid.Column="3" TextColor="White" BackgroundColor="#2abb9b" WidthRequest="50" HeightRequest="50" FontSize="Title" HorizontalOptions="FillAndExpand" Clicked="OperadorSeleccionado"></Button>
+
+
+        <Button Text="4"  Grid.Row="3" Grid.Column="0" TextColor="White" BackgroundColor="LightGray" WidthRequest="50" HeightRequest="50" FontSize="Title" HorizontalOptions="FillAndExpand" Clicked="NumeroSeleccionado"></Button>
+        <Button Text="5"  Grid.Row="3" Grid.Column="1" TextColor="White" BackgroundColor="LightGray" WidthRequest="50" HeightRequest="50" FontSize="Title" HorizontalOptions="FillAndExpand" Clicked="NumeroSeleccionado"></Button>
+        <Button Text="6"  Grid.Row="3" Grid.Column="2" TextColor="White" BackgroundColor="LightGray" WidthRequest="50" HeightRequest="50" FontSize="Title" HorizontalOptions="FillAndExpand" Clicked="NumeroSeleccionado"></Button>
+        <Button Text="-"  Grid.Row="3" Grid.Column="3" TextColor="White" BackgroundColor="#2abb9b" WidthRequest="50" HeightRequest="50" FontSize="Title" HorizontalOptions="FillAndExpand" Clicked="OperadorSeleccionado"></Button>
+
+
+        <Button Text="1"  Grid.Row="4" Grid.Column="0" TextColor="White" BackgroundColor="LightGray" WidthRequest="50" HeightRequest="50" FontSize="Title" HorizontalOptions="FillAndExpand" Clicked="NumeroSeleccionado"></Button>
+        <Button Text="2"  Grid.Row="4" Grid.Column="1" TextColor="White" BackgroundColor="LightGray" WidthRequest="50" HeightRequest="50" FontSize="Title" HorizontalOptions="FillAndExpand" Clicked="NumeroSeleccionado"></Button>
+        <Button Text="3"  Grid.Row="4" Grid.Column="2" TextColor="White" BackgroundColor="LightGray" WidthRequest="50" HeightRequest="50" FontSize="Title" HorizontalOptions="FillAndExpand" Clicked="NumeroSeleccionado"></Button>
+        <Button Text="+"  Grid.Row="4" Grid.Column="3" TextColor="White" BackgroundColor="#2abb9b" WidthRequest="50" HeightRequest="50" FontSize="Title" HorizontalOptions="FillAndExpand" Clicked="OperadorSeleccionado"></Button>
+
+
+        <Button Text="0"  Grid.Row="5" Grid.Column="0" TextColor="White" BackgroundColor="LightGray"  FontSize="Title" Clicked="NumeroSeleccionado"></Button>
+        <Button Text=","  Grid.Row="5" Grid.Column="1" TextColor="White" BackgroundColor="LightGray"  FontSize="Title" Clicked="NumeroSeleccionado"></Button>
+        <Button Text="="  Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="2" TextColor="White" BackgroundColor="#2abb9b" WidthRequest="50" HeightRequest="50" FontSize="Title" HorizontalOptions="FillAndExpand" Clicked="Calcular"></Button>
+
+
+    </Grid>
+
+</ContentPage>
